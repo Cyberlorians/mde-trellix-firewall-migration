@@ -1,0 +1,11 @@
+# Customer/tenant-specific files — never commit these
+*.xml
+/work/
+/Results-*.html
+
+# Keep the shared report template (matches Results-*.html, re-include explicitly)
+!/Results-template.html
+
+# OS/editor noise
+.DS_Store
+Thumbs.db

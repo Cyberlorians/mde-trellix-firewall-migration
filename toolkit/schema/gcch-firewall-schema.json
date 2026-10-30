@@ -1,0 +1,1693 @@
+{
+  "SchemaVersion": 1,
+  "GraphHost": "graph.microsoft.us",
+  "RetrievedAt": "2026-10-30T17:16:42.9262562+00:00",
+  "Template": {
+    "allowUnmanagedSettings": false,
+    "baseId": "19c8aa67-f286-4861-9aa0-f23541d31680",
+    "description": "Windows Firewall allows administrators to define granular Firewall rules. Define firewall rules with specific ports, protocols, applications and networks, to allow or block network traffic.",
+    "disableEntraGroupPolicyAssignment": false,
+    "displayName": "Windows Firewall Rules",
+    "displayVersion": "Version 1",
+    "lifecycleState": "active",
+    "platforms": "windows10",
+    "settingTemplateCount": 1,
+    "technologies": "mdm,microsoftSense",
+    "templateFamily": "endpointSecurityFirewall",
+    "version": 1,
+    "id": "19c8aa67-f286-4861-9aa0-f23541d31680_1"
+  },
+  "Root": {
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationGroupSettingCollectionInstanceTemplate",
+    "settingInstanceTemplateId": "76c7a8be-67d2-44bf-81a5-38c94926b1a1",
+    "settingDefinitionId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}",
+    "isRequired": false,
+    "auditRuleInformation": null,
+    "allowUnmanagedValues": true,
+    "groupSettingCollectionValueTemplate": [
+      {
+        "settingValueTemplateId": "f9b8c103-a33f-4aac-a89a-b575b51e1ef5",
+        "children": [
+          {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingInstanceTemplate",
+            "settingInstanceTemplateId": "6c85987f-3adb-4f8d-93e1-4f23e238121b",
+            "settingDefinitionId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_description",
+            "isRequired": false,
+            "auditRuleInformation": null,
+            "simpleSettingValueTemplate": {
+              "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueTemplate",
+              "settingValueTemplateId": "18ab9c3a-b6be-4995-9438-289c34eee294",
+              "defaultValue": null
+            }
+          },
+          {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstanceTemplate",
+            "settingInstanceTemplateId": "2114ad3d-157c-47d3-b646-60fcf50949c7",
+            "settingDefinitionId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_direction",
+            "isRequired": false,
+            "auditRuleInformation": null,
+            "choiceSettingValueTemplate": {
+              "defaultValue": null,
+              "recommendedValueDefinition": null,
+              "requiredValueDefinition": null,
+              "settingValueTemplateId": "8b45e13b-952d-4164-bbac-37f4e97b7985"
+            }
+          },
+          {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstanceTemplate",
+            "settingInstanceTemplateId": "fe674767-404d-4994-ac86-016f209851ee",
+            "settingDefinitionId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_edgetraversal",
+            "isRequired": false,
+            "auditRuleInformation": null,
+            "choiceSettingValueTemplate": {
+              "defaultValue": null,
+              "recommendedValueDefinition": null,
+              "requiredValueDefinition": null,
+              "settingValueTemplateId": "682b3827-caec-4378-99b3-0400c2c0537b"
+            }
+          },
+          {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstanceTemplate",
+            "settingInstanceTemplateId": "4e150e1a-6a10-49b2-a20c-911bf44ea767",
+            "settingDefinitionId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_enabled",
+            "isRequired": false,
+            "auditRuleInformation": null,
+            "choiceSettingValueTemplate": {
+              "defaultValue": null,
+              "recommendedValueDefinition": null,
+              "requiredValueDefinition": null,
+              "settingValueTemplateId": "7562f243-f281-4f6f-b7e6-ecdb76dc1f1b"
+            }
+          },
+          {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingInstanceTemplate",
+            "settingInstanceTemplateId": "dd825fa0-961b-4fcc-a6b3-4d2dc0419d4e",
+            "settingDefinitionId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_app_filepath",
+            "isRequired": false,
+            "auditRuleInformation": null,
+            "simpleSettingValueTemplate": {
+              "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueTemplate",
+              "settingValueTemplateId": "8c94fefa-67e5-40b5-8d97-6fca4f0c1e98",
+              "defaultValue": null
+            }
+          },
+          {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingInstanceTemplate",
+            "settingInstanceTemplateId": "38260bbc-8b66-4d35-864d-44643e6b7e0f",
+            "settingDefinitionId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_app_fqbn",
+            "isRequired": false,
+            "auditRuleInformation": null,
+            "simpleSettingValueTemplate": {
+              "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueTemplate",
+              "settingValueTemplateId": "19da3bfb-71f8-4adf-9480-458ff4a6b6a0",
+              "defaultValue": null
+            }
+          },
+          {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingCollectionInstanceTemplate",
+            "settingInstanceTemplateId": "406b5410-e52e-4df3-933f-1ee6e550a5c8",
+            "settingDefinitionId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_interfacetypes",
+            "isRequired": false,
+            "auditRuleInformation": null,
+            "allowUnmanagedValues": true,
+            "choiceSettingCollectionValueTemplate": [
+              {
+                "defaultValue": null,
+                "recommendedValueDefinition": null,
+                "requiredValueDefinition": null,
+                "settingValueTemplateId": "fc6ff11b-79dc-4119-9714-1d4ad9ae9c62"
+              }
+            ]
+          },
+          {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionInstanceTemplate",
+            "settingInstanceTemplateId": "8b5de251-c683-4440-91d6-3b679b0aa5aa",
+            "settingDefinitionId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_localaddressranges",
+            "isRequired": false,
+            "auditRuleInformation": null,
+            "allowUnmanagedValues": true,
+            "simpleSettingCollectionValueTemplate": [
+              {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueTemplate",
+                "settingValueTemplateId": "02296167-047a-4c14-9f53-f103cb5f699d",
+                "defaultValue": null
+              }
+            ]
+          },
+          {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionInstanceTemplate",
+            "settingInstanceTemplateId": "b57dc83e-5bf3-439a-b923-4c3e49ac9e2d",
+            "settingDefinitionId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_localportranges",
+            "isRequired": false,
+            "auditRuleInformation": null,
+            "allowUnmanagedValues": true,
+            "simpleSettingCollectionValueTemplate": [
+              {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueTemplate",
+                "settingValueTemplateId": "baa6f4e5-85d3-4060-b9c0-67997509fb10",
+                "defaultValue": null
+              }
+            ]
+          },
+          {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionInstanceTemplate",
+            "settingInstanceTemplateId": "b11c8e7d-babc-4899-a4b4-04683b898faa",
+            "settingDefinitionId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_localuserauthorizedlist",
+            "isRequired": false,
+            "auditRuleInformation": null,
+            "allowUnmanagedValues": true,
+            "simpleSettingCollectionValueTemplate": [
+              {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueTemplate",
+                "settingValueTemplateId": "a962947f-16c4-421d-b340-d707da3c222f",
+                "defaultValue": null
+              }
+            ]
+          },
+          {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingInstanceTemplate",
+            "settingInstanceTemplateId": "116a696a-3270-493e-9938-c336cf05ea98",
+            "settingDefinitionId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_name",
+            "isRequired": false,
+            "auditRuleInformation": null,
+            "simpleSettingValueTemplate": {
+              "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueTemplate",
+              "settingValueTemplateId": "12994a33-6185-4c3d-a0e8-69316f6293ea",
+              "defaultValue": null
+            }
+          },
+          {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingInstanceTemplate",
+            "settingInstanceTemplateId": "1a91448b-b04e-4cb0-a80c-10ec64addfda",
+            "settingDefinitionId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_app_packagefamilyname",
+            "isRequired": false,
+            "auditRuleInformation": null,
+            "simpleSettingValueTemplate": {
+              "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueTemplate",
+              "settingValueTemplateId": "a9b123c6-1c6f-4de3-8840-34f91dfb9422",
+              "defaultValue": null
+            }
+          },
+          {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingCollectionInstanceTemplate",
+            "settingInstanceTemplateId": "7dc9b243-cdd2-4359-b5f5-0c48edb8fd34",
+            "settingDefinitionId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_profiles",
+            "isRequired": false,
+            "auditRuleInformation": null,
+            "allowUnmanagedValues": true,
+            "choiceSettingCollectionValueTemplate": [
+              {
+                "defaultValue": null,
+                "recommendedValueDefinition": null,
+                "requiredValueDefinition": null,
+                "settingValueTemplateId": "75330111-26c5-43e4-931b-f9f880a5eb43"
+              }
+            ]
+          },
+          {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingInstanceTemplate",
+            "settingInstanceTemplateId": "b8f45398-674f-40c3-ab18-e002aa8e589b",
+            "settingDefinitionId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_protocol",
+            "isRequired": false,
+            "auditRuleInformation": null,
+            "simpleSettingValueTemplate": {
+              "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValueTemplate",
+              "settingValueTemplateId": "27d0d86c-d87d-473b-a41c-eef503d8baec",
+              "defaultValue": null,
+              "recommendedValueDefinition": null,
+              "requiredValueDefinition": null
+            }
+          },
+          {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionInstanceTemplate",
+            "settingInstanceTemplateId": "bf9855fc-f2c0-4241-94cf-94cf823f1c1c",
+            "settingDefinitionId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_remoteaddressranges",
+            "isRequired": false,
+            "auditRuleInformation": null,
+            "allowUnmanagedValues": true,
+            "simpleSettingCollectionValueTemplate": [
+              {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueTemplate",
+                "settingValueTemplateId": "4dc9acc7-b58e-499d-a2f5-2fe2dcfdd1f3",
+                "defaultValue": null
+              }
+            ]
+          },
+          {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionInstanceTemplate",
+            "settingInstanceTemplateId": "de5d058e-ab1d-4772-81f5-32b6a35b4587",
+            "settingDefinitionId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_remoteportranges",
+            "isRequired": false,
+            "auditRuleInformation": null,
+            "allowUnmanagedValues": true,
+            "simpleSettingCollectionValueTemplate": [
+              {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueTemplate",
+                "settingValueTemplateId": "01952dc3-6aa8-4302-ba67-c13894457b69",
+                "defaultValue": null
+              }
+            ]
+          },
+          {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingInstanceTemplate",
+            "settingInstanceTemplateId": "1bd709fe-1cd4-4cc4-9a6f-4cb7f104da66",
+            "settingDefinitionId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_app_servicename",
+            "isRequired": false,
+            "auditRuleInformation": null,
+            "simpleSettingValueTemplate": {
+              "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueTemplate",
+              "settingValueTemplateId": "c77294ec-795e-43dc-9af6-775b3b2f911d",
+              "defaultValue": null
+            }
+          },
+          {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstanceTemplate",
+            "settingInstanceTemplateId": "0565cfd1-21c2-4965-b87f-6bde2b8d2cbd",
+            "settingDefinitionId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_action_type",
+            "isRequired": false,
+            "auditRuleInformation": null,
+            "choiceSettingValueTemplate": {
+              "defaultValue": null,
+              "recommendedValueDefinition": null,
+              "requiredValueDefinition": null,
+              "settingValueTemplateId": "419773d8-bffe-4d6f-a91f-286871963f5c"
+            }
+          },
+          {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionInstanceTemplate",
+            "settingInstanceTemplateId": "02ab2b98-0447-47da-9e3d-d98a181de49a",
+            "settingDefinitionId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_remoteaddressdynamickeywords",
+            "isRequired": false,
+            "auditRuleInformation": null,
+            "allowUnmanagedValues": true,
+            "simpleSettingCollectionValueTemplate": [
+              {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueTemplate",
+                "settingValueTemplateId": "29a70b61-b58e-4de9-a63d-27279b5777ef",
+                "defaultValue": null
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Definitions": {
+    "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_name": {
+      "@odata.context": "https://graph.microsoft.us/beta/$metadata#deviceManagement/configurationSettings/$entity",
+      "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+      "accessTypes": "add,delete,get,replace",
+      "keywords": [
+        "Name",
+        "Firewall"
+      ],
+      "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/Firewall-csp/"
+      ],
+      "baseUri": "./Vendor/MSFT/Firewall",
+      "offsetUri": "/MdmStore/FirewallRules/{0}/Name",
+      "rootDefinitionId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}",
+      "categoryId": "4a5e4714-00ac-4793-b0cc-5049041b0ed7",
+      "settingUsage": "configuration",
+      "uxBehavior": "default",
+      "visibility": "template",
+      "riskLevel": "low",
+      "id": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_name",
+      "description": "Specifies the friendly name of the firewall rule.",
+      "helpText": "",
+      "name": "Name",
+      "displayName": "Name",
+      "version": "639282295183631971",
+      "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm,configManager,microsoftSense",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.16299",
+        "windowsSkus": [
+          "windowsEnterprise",
+          "windowsProfessional",
+          "windowsEducation",
+          "holographicForBusiness",
+          "windowsMultiSession",
+          "iotEnterprise",
+          "windowsCloudN",
+          "windows11SE",
+          "iotEnterpriseSEval",
+          "windowsCPC"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+      },
+      "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+      },
+      "referredSettingInformationList": [],
+      "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": null,
+        "maximumLength": 87516,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+      },
+      "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": null
+      },
+      "dependentOn": [
+        {
+          "dependentOn": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}",
+          "parentSettingId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}"
+        }
+      ],
+      "dependedOnBy": []
+    },
+    "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_profiles": {
+      "@odata.context": "https://graph.microsoft.us/beta/$metadata#deviceManagement/configurationSettings/$entity",
+      "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingCollectionDefinition",
+      "accessTypes": "get,replace",
+      "keywords": [
+        "Profiles",
+        "Firewall"
+      ],
+      "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/Firewall-csp/"
+      ],
+      "baseUri": "./Vendor/MSFT/Firewall",
+      "offsetUri": "/MdmStore/FirewallRules/{0}/Profiles",
+      "rootDefinitionId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}",
+      "categoryId": "4a5e4714-00ac-4793-b0cc-5049041b0ed7",
+      "settingUsage": "configuration",
+      "uxBehavior": "default",
+      "visibility": "template",
+      "riskLevel": "low",
+      "id": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_profiles",
+      "description": "Specifies the profiles to which the rule belongs: Domain, Private, Public.  See FW_PROFILE_TYPE for the bitmasks that are used to identify profile types.  If not specified, the default is All.",
+      "helpText": "",
+      "name": "Profiles",
+      "displayName": "Network Types",
+      "version": "639282295183631971",
+      "defaultOptionId": null,
+      "maximumCount": 100,
+      "minimumCount": 0,
+      "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm,configManager,microsoftSense",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.16299",
+        "windowsSkus": [
+          "windowsEnterprise",
+          "windowsProfessional",
+          "windowsEducation",
+          "holographicForBusiness",
+          "windowsMultiSession",
+          "iotEnterprise",
+          "windowsCloudN",
+          "windows11SE",
+          "iotEnterpriseSEval",
+          "windowsCPC"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+      },
+      "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+      },
+      "referredSettingInformationList": [],
+      "options": [
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_profiles_1",
+          "description": "FW_PROFILE_TYPE_DOMAIN:  This value represents the profile for networks that are connected to domains.",
+          "helpText": null,
+          "name": "FW_PROFILE_TYPE_DOMAIN:  This value represents the profile for networks that are connected to domains.",
+          "displayName": "FW_PROFILE_TYPE_DOMAIN:  This value represents the profile for networks that are connected to domains.",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+            "settingValueTemplateReference": null,
+            "value": 1
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}"
+            }
+          ],
+          "dependedOnBy": []
+        },
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_profiles_2",
+          "description": "FW_PROFILE_TYPE_STANDARD:  This value represents the standard profile for networks. These networks are classified as private by the administrators in the server host. The classification happens the first time the host connects to the network. Usually these networks are behind Network Address Translation (NAT) devices, routers, and other edge devices, and they are in a private location, such as a home or an office. AND FW_PROFILE_TYPE_PRIVATE:  This value represents the profile for private networks, which is represented by the same value as that used for FW_PROFILE_TYPE_STANDARD.",
+          "helpText": null,
+          "name": "FW_PROFILE_TYPE_STANDARD:  This value represents the standard profile for networks. These networks are classified as private by the administrators in the server host. The classification happens the first time the host connects to the network. Usually these networks are behind Network Address Translation (NAT) devices, routers, and other edge devices, and they are in a private location, such as a home or an office. AND FW_PROFILE_TYPE_PRIVATE:  This value represents the profile for private networks, which is represented by the same value as that used for FW_PROFILE_TYPE_STANDARD.",
+          "displayName": "FW_PROFILE_TYPE_PRIVATE: This value represents the standard profile for networks. These networks are classified as private by the administrators in the server host. The classification happens the first time the host connects to the network. Usually these networks are behind Network Address Translation (NAT) devices, routers, and other edge devices, and they are in a private location, such as a home or an office. AND FW_PROFILE_TYPE_PRIVATE:  This value represents the profile for private networks, which is represented by the same value as that used for FW_PROFILE_TYPE_STANDARD.",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+            "settingValueTemplateReference": null,
+            "value": 2
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}"
+            }
+          ],
+          "dependedOnBy": []
+        },
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_profiles_4",
+          "description": "FW_PROFILE_TYPE_PUBLIC:  This value represents the profile for public networks. These networks are classified as public by the administrators in the server host. The classification happens the first time the host connects to the network. Usually these networks are those at airports, coffee shops, and other public places where the peers in the network or the network administrator are not trusted.",
+          "helpText": null,
+          "name": "FW_PROFILE_TYPE_PUBLIC:  This value represents the profile for public networks. These networks are classified as public by the administrators in the server host. The classification happens the first time the host connects to the network. Usually these networks are those at airports, coffee shops, and other public places where the peers in the network or the network administrator are not trusted.",
+          "displayName": "FWPROFILETYPEPUBLIC:  This value represents the profile for public networks. These networks are classified as public by the administrators in the server host. The classification happens the first time the host connects to the network. Usually these networks are those at airports, coffee shops, and other public places where the peers in the network or the network administrator are not trusted.",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+            "settingValueTemplateReference": null,
+            "value": 4
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}"
+            }
+          ],
+          "dependedOnBy": []
+        },
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_profiles_2147483647",
+          "description": "FW_PROFILE_TYPE_ALL:  This value represents all these network sets and any future network sets.",
+          "helpText": null,
+          "name": "FW_PROFILE_TYPE_ALL:  This value represents all these network sets and any future network sets.",
+          "displayName": "FW_PROFILE_TYPE_ALL:  This value represents all these network sets and any future network sets.",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+            "settingValueTemplateReference": null,
+            "value": 2147483647
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}"
+            }
+          ],
+          "dependedOnBy": []
+        },
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_profiles_-2147483648",
+          "description": "FW_PROFILE_TYPE_CURRENT:  This value represents the current profiles to which the firewall and advanced security components determine the host is connected at the moment of the call. This value can be specified only in method calls, and it cannot be combined with other flags.",
+          "helpText": null,
+          "name": "FW_PROFILE_TYPE_CURRENT:  This value represents the current profiles to which the firewall and advanced security components determine the host is connected at the moment of the call. This value can be specified only in method calls, and it cannot be combined with other flags.",
+          "displayName": "FW_PROFILE_TYPE_CURRENT:  This value represents the current profiles to which the firewall and advanced security components determine the host is connected at the moment of the call. This value can be specified only in method calls, and it cannot be combined with other flags.",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+            "settingValueTemplateReference": null,
+            "value": -2147483648
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}"
+            }
+          ],
+          "dependedOnBy": []
+        }
+      ]
+    },
+    "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_action_type": {
+      "@odata.context": "https://graph.microsoft.us/beta/$metadata#deviceManagement/configurationSettings/$entity",
+      "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+      "accessTypes": "get,replace",
+      "keywords": [
+        "Action",
+        "Type",
+        "Firewall"
+      ],
+      "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/Firewall-csp/"
+      ],
+      "baseUri": "./Vendor/MSFT/Firewall",
+      "offsetUri": "/MdmStore/FirewallRules/{0}/Action/Type",
+      "rootDefinitionId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}",
+      "categoryId": "4a5e4714-00ac-4793-b0cc-5049041b0ed7",
+      "settingUsage": "configuration",
+      "uxBehavior": "toggle",
+      "visibility": "template",
+      "riskLevel": "low",
+      "id": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_action_type",
+      "description": "Specifies the action the rule enforces to block or allow network traffic.",
+      "helpText": "",
+      "name": "Type",
+      "displayName": "Action",
+      "version": "639282295183631971",
+      "defaultOptionId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_action_type_1",
+      "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm,configManager,microsoftSense",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.16299",
+        "windowsSkus": [
+          "windowsEnterprise",
+          "windowsProfessional",
+          "windowsEducation",
+          "holographicForBusiness",
+          "windowsMultiSession",
+          "iotEnterprise",
+          "windowsCloudN",
+          "windows11SE",
+          "iotEnterpriseSEval",
+          "windowsCPC"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+      },
+      "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+      },
+      "referredSettingInformationList": [],
+      "options": [
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_action_type_0",
+          "description": "Block",
+          "helpText": null,
+          "name": "Block",
+          "displayName": "Block",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+            "settingValueTemplateReference": null,
+            "value": 0
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}"
+            }
+          ],
+          "dependedOnBy": []
+        },
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_action_type_1",
+          "description": "Allow",
+          "helpText": null,
+          "name": "Allow",
+          "displayName": "Allow",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+            "settingValueTemplateReference": null,
+            "value": 1
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}"
+            }
+          ],
+          "dependedOnBy": []
+        }
+      ]
+    },
+    "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_app_filepath": {
+      "@odata.context": "https://graph.microsoft.us/beta/$metadata#deviceManagement/configurationSettings/$entity",
+      "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+      "accessTypes": "add,delete,get,replace",
+      "keywords": [
+        "File Path",
+        "Firewall"
+      ],
+      "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/Firewall-csp/"
+      ],
+      "baseUri": "./Vendor/MSFT/Firewall",
+      "offsetUri": "/MdmStore/FirewallRules/{0}/App/FilePath",
+      "rootDefinitionId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}",
+      "categoryId": "4a5e4714-00ac-4793-b0cc-5049041b0ed7",
+      "settingUsage": "configuration",
+      "uxBehavior": "default",
+      "visibility": "template",
+      "riskLevel": "low",
+      "id": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_app_filepath",
+      "description": "The file path of an app is simply its location on the client device. For example, C:\\Windows\\System\\Notepad.exe or %WINDIR%\\Notepad.exe. You can define one application to be used in each Firewall rule. If you specify multiple conditions in a single rule, these will be treated as an AND operation. i.e program=svchost.exe AND service=mpssvc, etc. All of the app related conditions in a single rule work to scope the traffic even further, so they must all correspond to the specific app/service.",
+      "helpText": "",
+      "name": "FilePath",
+      "displayName": "File Path",
+      "version": "639282295183631971",
+      "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm,configManager,microsoftSense",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.16299",
+        "windowsSkus": [
+          "windowsEnterprise",
+          "windowsProfessional",
+          "windowsEducation",
+          "holographicForBusiness",
+          "windowsMultiSession",
+          "iotEnterprise",
+          "windowsCloudN",
+          "windows11SE",
+          "iotEnterpriseSEval",
+          "windowsCPC"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+      },
+      "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+      },
+      "referredSettingInformationList": [],
+      "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "regEx",
+        "inputValidationSchema": "^[^*]+$",
+        "maximumLength": 87516,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+      },
+      "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": null
+      },
+      "dependentOn": [
+        {
+          "dependentOn": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}",
+          "parentSettingId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}"
+        }
+      ],
+      "dependedOnBy": []
+    },
+    "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_remoteaddressranges": {
+      "@odata.context": "https://graph.microsoft.us/beta/$metadata#deviceManagement/configurationSettings/$entity",
+      "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionDefinition",
+      "accessTypes": "add,delete,get,replace",
+      "keywords": [
+        "Remote Address Ranges",
+        "Firewall"
+      ],
+      "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/Firewall-csp/"
+      ],
+      "baseUri": "./Vendor/MSFT/Firewall",
+      "offsetUri": "/MdmStore/FirewallRules/{0}/RemoteAddressRanges",
+      "rootDefinitionId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}",
+      "categoryId": "4a5e4714-00ac-4793-b0cc-5049041b0ed7",
+      "settingUsage": "configuration",
+      "uxBehavior": "default",
+      "visibility": "template",
+      "riskLevel": "low",
+      "id": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_remoteaddressranges",
+      "description": "List of remote addresses covered by the rule. Tokens are case insensitive. Valid tokens include:​​​\r\n\r\n\"*\" indicates any remote address. If present, this must be the only token included.\r\n\r\n\"Defaultgateway\"\r\n\"DHCP\"\r\n\"DNS\"\r\n\"WINS\"\r\n\"Intranet\" (supported on Windows versions 1809+)\r\n\"RmtIntranet\" (supported on Windows versions 1809+)\r\n\"Internet\" (supported on Windows versions 1809+)\r\n\"Ply2Renders\" ​(supported on Windows versions 1809+)\r\n\"LocalSubnet\" indicates any local address on the local subnet.\r\nA subnet can be specified using either the subnet mask or network prefix notation. If neither a subnet mask nor a network prefix is specified, the subnet mask defaults to 255.255.255.255.\r\nA valid IPv6 address.\r\nAn IPv4 address range in the format of \"start address - end address\" with no spaces included, where the start address is less than the end address.\r\nAn IPv6 address range in the format of \"start address - end address\" with no spaces included, where the start address is less than the end address.​\r\n\r\nIf not specified, the default is \"Any address.\"",
+      "helpText": "",
+      "name": "RemoteAddressRanges",
+      "displayName": "Remote Address Ranges",
+      "version": "639282295183631971",
+      "maximumCount": 1000,
+      "minimumCount": 0,
+      "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm,configManager,microsoftSense",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.16299",
+        "windowsSkus": [
+          "windowsEnterprise",
+          "windowsProfessional",
+          "windowsEducation",
+          "holographicForBusiness",
+          "windowsMultiSession",
+          "iotEnterprise",
+          "windowsCloudN",
+          "windows11SE",
+          "iotEnterpriseSEval",
+          "windowsCPC"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+      },
+      "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+      },
+      "referredSettingInformationList": [],
+      "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "regEx",
+        "inputValidationSchema": "^(0[0-7]{10,11}|0(x|X)[0-9a-fA-F]{8}|(\\b4\\d{8}[0-5]\\b|\\b[1-3]?\\d{8}\\d?\\b)|((2(([0-4]\\d)|(5[0-5]))|1\\d{2}|\\d\\d?)|(0(x|X)[0-9a-fA-F]{2})|(0[0-7]{3}))(\\.((2(([0-4]\\d)|(5[0-5]))|1\\d{2}|\\d\\d?)|(0(x|X)[0-9a-fA-F]{2})|(0[0-7]{3}))){3})(/0*(\\d{1}|(?:[0-2]\\d|3[0-2])))?$|^(0[0-7]{10,11}|0(x|X)[0-9a-fA-F]{8}|(\\b4\\d{8}[0-5]\\b|\\b[1-3]?\\d{8}\\d?\\b)|((2(([0-4]\\d)|(5[0-5]))|1\\d{2}|\\d\\d?)|(0(x|X)[0-9a-fA-F]{2})|(0[0-7]{3}))(\\.((2(([0-4]\\d)|(5[0-5]))|1\\d{2}|\\d\\d?)|(0(x|X)[0-9a-fA-F]{2})|(0[0-7]{3}))){3})(\\/(((25[0-5]?)|(2[0-4]\\d?)|(1\\d\\d?)|\\d{1,2})\\.){3}((25[0-5]?)|(2[0-4]\\d?)|(1\\d\\d?)|\\d{1,2}))?$|^(((25[0-5]?)|(2[0-4][0-9]?)|(1[0-9]{2})|[0-9]{1,2})(\\.((25[0-5]?)|(2[0-4][0-9]?)|(1[0-9]{2})|[0-9]{1,2})){3})-(((25[0-5]?)|(2[0-4][0-9]?)|(1[0-9]{2})|[0-9]{1,2})(\\.((25[0-5]?)|(2[0-4][0-9]?)|(1[0-9]{2})|[0-9]{1,2})){3})$|^((([0-9A-Fa-f]{1,4}:){7}([0-9A-Fa-f]{1,4}|:))|(([0-9A-Fa-f]{1,4}:){6}(:[0-9A-Fa-f]{1,4}|((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3})|:))|(([0-9A-Fa-f]{1,4}:){5}(((:[0-9A-Fa-f]{1,4}){1,2})|:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3})|:))|(([0-9A-Fa-f]{1,4}:){4}(((:[0-9A-Fa-f]{1,4}){1,3})|((:[0-9A-Fa-f]{1,4})?:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){3}(((:[0-9A-Fa-f]{1,4}){1,4})|((:[0-9A-Fa-f]{1,4}){0,2}:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){2}(((:[0-9A-Fa-f]{1,4}){1,5})|((:[0-9A-Fa-f]{1,4}){0,3}:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){1}(((:[0-9A-Fa-f]{1,4}){1,6})|((:[0-9A-Fa-f]{1,4}){0,4}:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:))|(:(((:[0-9A-Fa-f]{1,4}){1,7})|((:[0-9A-Fa-f]{1,4}){0,5}:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:)))(/0*(\\d{1,2}|1(?:[0-1]\\d|2[0-8])))?$|^\\[((([0-9A-Fa-f]{1,4}:){7}([0-9A-Fa-f]{1,4}|:))|(([0-9A-Fa-f]{1,4}:){6}(:[0-9A-Fa-f]{1,4}|((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3})|:))|(([0-9A-Fa-f]{1,4}:){5}(((:[0-9A-Fa-f]{1,4}){1,2})|:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3})|:))|(([0-9A-Fa-f]{1,4}:){4}(((:[0-9A-Fa-f]{1,4}){1,3})|((:[0-9A-Fa-f]{1,4})?:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){3}(((:[0-9A-Fa-f]{1,4}){1,4})|((:[0-9A-Fa-f]{1,4}){0,2}:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){2}(((:[0-9A-Fa-f]{1,4}){1,5})|((:[0-9A-Fa-f]{1,4}){0,3}:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){1}(((:[0-9A-Fa-f]{1,4}){1,6})|((:[0-9A-Fa-f]{1,4}){0,4}:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:))|(:(((:[0-9A-Fa-f]{1,4}){1,7})|((:[0-9A-Fa-f]{1,4}){0,5}:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:)))\\](/0*(\\d{1,2}|1(?:[0-1]\\d|2[0-8])))?$|^(((([0-9A-Fa-f]{1,4}:){7}([0-9A-Fa-f]{1,4}|:))|(([0-9A-Fa-f]{1,4}:){6}(:[0-9A-Fa-f]{1,4}|((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3})|:))|(([0-9A-Fa-f]{1,4}:){5}(((:[0-9A-Fa-f]{1,4}){1,2})|:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3})|:))|(([0-9A-Fa-f]{1,4}:){4}(((:[0-9A-Fa-f]{1,4}){1,3})|((:[0-9A-Fa-f]{1,4})?:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){3}(((:[0-9A-Fa-f]{1,4}){1,4})|((:[0-9A-Fa-f]{1,4}){0,2}:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){2}(((:[0-9A-Fa-f]{1,4}){1,5})|((:[0-9A-Fa-f]{1,4}){0,3}:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){1}(((:[0-9A-Fa-f]{1,4}){1,6})|((:[0-9A-Fa-f]{1,4}){0,4}:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:))|(:(((:[0-9A-Fa-f]{1,4}){1,7})|((:[0-9A-Fa-f]{1,4}){0,5}:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:)))|(\\[((([0-9A-Fa-f]{1,4}:){7}([0-9A-Fa-f]{1,4}|:))|(([0-9A-Fa-f]{1,4}:){6}(:[0-9A-Fa-f]{1,4}|((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3})|:))|(([0-9A-Fa-f]{1,4}:){5}(((:[0-9A-Fa-f]{1,4}){1,2})|:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3})|:))|(([0-9A-Fa-f]{1,4}:){4}(((:[0-9A-Fa-f]{1,4}){1,3})|((:[0-9A-Fa-f]{1,4})?:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){3}(((:[0-9A-Fa-f]{1,4}){1,4})|((:[0-9A-Fa-f]{1,4}){0,2}:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){2}(((:[0-9A-Fa-f]{1,4}){1,5})|((:[0-9A-Fa-f]{1,4}){0,3}:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){1}(((:[0-9A-Fa-f]{1,4}){1,6})|((:[0-9A-Fa-f]{1,4}){0,4}:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:))|(:(((:[0-9A-Fa-f]{1,4}){1,7})|((:[0-9A-Fa-f]{1,4}){0,5}:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:)))\\]))-(((([0-9A-Fa-f]{1,4}:){7}([0-9A-Fa-f]{1,4}|:))|(([0-9A-Fa-f]{1,4}:){6}(:[0-9A-Fa-f]{1,4}|((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3})|:))|(([0-9A-Fa-f]{1,4}:){5}(((:[0-9A-Fa-f]{1,4}){1,2})|:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3})|:))|(([0-9A-Fa-f]{1,4}:){4}(((:[0-9A-Fa-f]{1,4}){1,3})|((:[0-9A-Fa-f]{1,4})?:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){3}(((:[0-9A-Fa-f]{1,4}){1,4})|((:[0-9A-Fa-f]{1,4}){0,2}:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){2}(((:[0-9A-Fa-f]{1,4}){1,5})|((:[0-9A-Fa-f]{1,4}){0,3}:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){1}(((:[0-9A-Fa-f]{1,4}){1,6})|((:[0-9A-Fa-f]{1,4}){0,4}:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:))|(:(((:[0-9A-Fa-f]{1,4}){1,7})|((:[0-9A-Fa-f]{1,4}){0,5}:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:)))|(\\[((([0-9A-Fa-f]{1,4}:){7}([0-9A-Fa-f]{1,4}|:))|(([0-9A-Fa-f]{1,4}:){6}(:[0-9A-Fa-f]{1,4}|((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3})|:))|(([0-9A-Fa-f]{1,4}:){5}(((:[0-9A-Fa-f]{1,4}){1,2})|:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3})|:))|(([0-9A-Fa-f]{1,4}:){4}(((:[0-9A-Fa-f]{1,4}){1,3})|((:[0-9A-Fa-f]{1,4})?:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){3}(((:[0-9A-Fa-f]{1,4}){1,4})|((:[0-9A-Fa-f]{1,4}){0,2}:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){2}(((:[0-9A-Fa-f]{1,4}){1,5})|((:[0-9A-Fa-f]{1,4}){0,3}:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){1}(((:[0-9A-Fa-f]{1,4}){1,6})|((:[0-9A-Fa-f]{1,4}){0,4}:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:))|(:(((:[0-9A-Fa-f]{1,4}){1,7})|((:[0-9A-Fa-f]{1,4}){0,5}:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:)))\\]))$|^\\*$|^(DEFAULTGATEWAY|DHCP|DNS|WINS|INTRANET|RMTINTRANET|INTERNET|PLY2RENDERS|LOCALSUBNET|CAPTIVEPORTAL|defaultgateway|dhcp|dns|wins|intranet|rmtintranet|internet|ply2renders|localsubnet|captiveportal|Defaultgateway|Dhcp|Dns|Wins|Intranet|Rmtintranet|Internet|Ply2renders|Localsubnet|Captiveportal|DefaultGateway|RmtIntranet|Ply2Renders|LocalSubnet|CaptivePortal|defaultGateway|rmtIntranet|ply2Renders|localSubnet|captivePortal)$",
+        "maximumLength": 87516,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+      },
+      "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": null
+      },
+      "dependentOn": [
+        {
+          "dependentOn": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}",
+          "parentSettingId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}"
+        }
+      ],
+      "dependedOnBy": []
+    },
+    "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_localportranges": {
+      "@odata.context": "https://graph.microsoft.us/beta/$metadata#deviceManagement/configurationSettings/$entity",
+      "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionDefinition",
+      "accessTypes": "add,delete,get,replace",
+      "keywords": [
+        "Local Port Ranges",
+        "Firewall"
+      ],
+      "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/Firewall-csp/"
+      ],
+      "baseUri": "./Vendor/MSFT/Firewall",
+      "offsetUri": "/MdmStore/FirewallRules/{0}/LocalPortRanges",
+      "rootDefinitionId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}",
+      "categoryId": "4a5e4714-00ac-4793-b0cc-5049041b0ed7",
+      "settingUsage": "configuration",
+      "uxBehavior": "default",
+      "visibility": "template",
+      "riskLevel": "low",
+      "id": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_localportranges",
+      "description": "List of local port ranges. Valid values include:​\r\n\r\nA valid port number between 0 and 65535. For example, 200\r\nA port range in the format of \"start port – end port\" with no spaces included, where the start port is less than the end port. For example, 300-320\r\n\r\nIf not specified, the default is \"All ports.\" When defining multiple local and remote port ranges, the Firewall rule will be evaluated as OR operations within an individual field, and AND operations across rule fields. i.e. (local port A OR local port B) AND (remote port A OR remote port B). When setting this field in a firewall rule, the protocol field must also be set, to either 6 (TCP) or 17 (UDP).",
+      "helpText": "",
+      "name": "LocalPortRanges",
+      "displayName": "Local Port Ranges",
+      "version": "639282295183631971",
+      "maximumCount": 1000,
+      "minimumCount": 0,
+      "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm,configManager,microsoftSense",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.16299",
+        "windowsSkus": [
+          "windowsEnterprise",
+          "windowsProfessional",
+          "windowsEducation",
+          "holographicForBusiness",
+          "windowsMultiSession",
+          "iotEnterprise",
+          "windowsCloudN",
+          "windows11SE",
+          "iotEnterpriseSEval",
+          "windowsCPC"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+      },
+      "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+      },
+      "referredSettingInformationList": [],
+      "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "regEx",
+        "inputValidationSchema": "^(6(?:[0-4]\\d{3}|5(?:[0-4]\\d{2}|5(?:[0-2]\\d|3[0-5])))|(?:[1-5]\\d{0,3}|[6-9]\\d{0,2})?\\d)$|^(6(?:[0-4]\\d{3}|5(?:[0-4]\\d{2}|5(?:[0-2]\\d|3[0-5])))|(?:[1-5]\\d{0,3}|[6-9]\\d{0,2})?\\d)-(6(?:[0-4]\\d{3}|5(?:[0-4]\\d{2}|5(?:[0-2]\\d|3[0-5])))|(?:[1-5]\\d{0,3}|[6-9]\\d{0,2})?\\d)$",
+        "maximumLength": 87516,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+      },
+      "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": null
+      },
+      "dependentOn": [
+        {
+          "dependentOn": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}",
+          "parentSettingId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}"
+        }
+      ],
+      "dependedOnBy": []
+    },
+    "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_protocol": {
+      "@odata.context": "https://graph.microsoft.us/beta/$metadata#deviceManagement/configurationSettings/$entity",
+      "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+      "accessTypes": "add,delete,get,replace",
+      "keywords": [
+        "Protocol",
+        "Firewall"
+      ],
+      "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/Firewall-csp/"
+      ],
+      "baseUri": "./Vendor/MSFT/Firewall",
+      "offsetUri": "/MdmStore/FirewallRules/{0}/Protocol",
+      "rootDefinitionId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}",
+      "categoryId": "4a5e4714-00ac-4793-b0cc-5049041b0ed7",
+      "settingUsage": "configuration",
+      "uxBehavior": "default",
+      "visibility": "template",
+      "riskLevel": "low",
+      "id": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_protocol",
+      "description": "Select the protocol for this port rule. Transport layer protocols, TCP(6) and UDP(17), allow you to specify ports or port ranges. For custom protocols, enter a number between 0 and 255 representing the IP protocol. If not specified, the default is \"Any.\"",
+      "helpText": "",
+      "name": "Protocol",
+      "displayName": "Protocol",
+      "version": "639282295183631971",
+      "defaultValue": null,
+      "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm,configManager,microsoftSense",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.16299",
+        "windowsSkus": [
+          "windowsEnterprise",
+          "windowsProfessional",
+          "windowsEducation",
+          "holographicForBusiness",
+          "windowsMultiSession",
+          "iotEnterprise",
+          "windowsCloudN",
+          "windows11SE",
+          "iotEnterpriseSEval",
+          "windowsCPC"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+      },
+      "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+      },
+      "referredSettingInformationList": [],
+      "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValueDefinition",
+        "maximumValue": 255,
+        "minimumValue": 0
+      },
+      "dependentOn": [
+        {
+          "dependentOn": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}",
+          "parentSettingId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}"
+        }
+      ],
+      "dependedOnBy": []
+    },
+    "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_interfacetypes": {
+      "@odata.context": "https://graph.microsoft.us/beta/$metadata#deviceManagement/configurationSettings/$entity",
+      "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingCollectionDefinition",
+      "accessTypes": "add,delete,get,replace",
+      "keywords": [
+        "Interface Types",
+        "Firewall"
+      ],
+      "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/Firewall-csp/"
+      ],
+      "baseUri": "./Vendor/MSFT/Firewall",
+      "offsetUri": "/MdmStore/FirewallRules/{0}/InterfaceTypes",
+      "rootDefinitionId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}",
+      "categoryId": "4a5e4714-00ac-4793-b0cc-5049041b0ed7",
+      "settingUsage": "configuration",
+      "uxBehavior": "default",
+      "visibility": "template",
+      "riskLevel": "low",
+      "id": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_interfacetypes",
+      "description": "String value. Multiple interface types can be included in the string by separating each value with a \",\". Acceptable values are \"RemoteAccess\", \"Wireless\", \"Lan\", and \"All\".\n If more than one interface type is specified, the strings must be separated by a comma.",
+      "helpText": "",
+      "name": "InterfaceTypes",
+      "displayName": "Interface Types",
+      "version": "639282295183631971",
+      "defaultOptionId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_interfacetypes_all",
+      "maximumCount": 100,
+      "minimumCount": 0,
+      "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm,configManager,microsoftSense",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.16299",
+        "windowsSkus": [
+          "windowsEnterprise",
+          "windowsProfessional",
+          "windowsEducation",
+          "holographicForBusiness",
+          "windowsMultiSession",
+          "iotEnterprise",
+          "windowsCloudN",
+          "windows11SE",
+          "iotEnterpriseSEval",
+          "windowsCPC"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+      },
+      "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+      },
+      "referredSettingInformationList": [],
+      "options": [
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_interfacetypes_remoteaccess",
+          "description": "RemoteAccess",
+          "helpText": null,
+          "name": "RemoteAccess",
+          "displayName": "Remote Access",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "settingValueTemplateReference": null,
+            "value": "RemoteAccess"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}"
+            }
+          ],
+          "dependedOnBy": []
+        },
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_interfacetypes_wireless",
+          "description": "Wireless",
+          "helpText": null,
+          "name": "Wireless",
+          "displayName": "Wireless",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "settingValueTemplateReference": null,
+            "value": "Wireless"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}"
+            }
+          ],
+          "dependedOnBy": []
+        },
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_interfacetypes_lan",
+          "description": "Lan",
+          "helpText": null,
+          "name": "Lan",
+          "displayName": "Lan",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "settingValueTemplateReference": null,
+            "value": "Lan"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}"
+            }
+          ],
+          "dependedOnBy": []
+        },
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_interfacetypes_mobilebroadband",
+          "description": "MobileBroadband",
+          "helpText": null,
+          "name": "MobileBroadband",
+          "displayName": "[Not Supported] Mobile Broadband",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "settingValueTemplateReference": null,
+            "value": "MobileBroadband"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}"
+            }
+          ],
+          "dependedOnBy": []
+        },
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_interfacetypes_mbb",
+          "description": "MobileBroadband",
+          "helpText": null,
+          "name": "MBB",
+          "displayName": "Mobile Broadband",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "settingValueTemplateReference": null,
+            "value": "MBB"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}"
+            }
+          ],
+          "dependedOnBy": []
+        },
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_interfacetypes_all",
+          "description": "All",
+          "helpText": null,
+          "name": "All",
+          "displayName": "All",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "settingValueTemplateReference": null,
+            "value": "All"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}"
+            }
+          ],
+          "dependedOnBy": []
+        }
+      ]
+    },
+    "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_remoteportranges": {
+      "@odata.context": "https://graph.microsoft.us/beta/$metadata#deviceManagement/configurationSettings/$entity",
+      "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionDefinition",
+      "accessTypes": "add,delete,get,replace",
+      "keywords": [
+        "Remote Port Ranges",
+        "Firewall"
+      ],
+      "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/Firewall-csp/"
+      ],
+      "baseUri": "./Vendor/MSFT/Firewall",
+      "offsetUri": "/MdmStore/FirewallRules/{0}/RemotePortRanges",
+      "rootDefinitionId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}",
+      "categoryId": "4a5e4714-00ac-4793-b0cc-5049041b0ed7",
+      "settingUsage": "configuration",
+      "uxBehavior": "default",
+      "visibility": "template",
+      "riskLevel": "low",
+      "id": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_remoteportranges",
+      "description": "List of remote port ranges. Valid values include:​\r\n\r\nA valid port number between 0 and 65535. For example, 200\r\nA port range in the format of \"start port – end port\" with no spaces included, where the start port is less than the end port. For example, 300-320\r\n\r\nIf not specified, the default is \"All ports.\" When defining multiple local and remote port ranges, the Firewall rule will be evaluated as OR operations within an individual field, and AND operations across rule fields. i.e. (local port A OR local port B) AND (remote port A OR remote port B). When setting this field in a firewall rule, the protocol field must also be set, to either 6 (TCP) or 17 (UDP).",
+      "helpText": "",
+      "name": "RemotePortRanges",
+      "displayName": "Remote Port Ranges",
+      "version": "639282295183631971",
+      "maximumCount": 1000,
+      "minimumCount": 0,
+      "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm,configManager,microsoftSense",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.16299",
+        "windowsSkus": [
+          "windowsEnterprise",
+          "windowsProfessional",
+          "windowsEducation",
+          "holographicForBusiness",
+          "windowsMultiSession",
+          "iotEnterprise",
+          "windowsCloudN",
+          "windows11SE",
+          "iotEnterpriseSEval",
+          "windowsCPC"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+      },
+      "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+      },
+      "referredSettingInformationList": [],
+      "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "regEx",
+        "inputValidationSchema": "^(6(?:[0-4]\\d{3}|5(?:[0-4]\\d{2}|5(?:[0-2]\\d|3[0-5])))|(?:[1-5]\\d{0,3}|[6-9]\\d{0,2})?\\d)$|^(6(?:[0-4]\\d{3}|5(?:[0-4]\\d{2}|5(?:[0-2]\\d|3[0-5])))|(?:[1-5]\\d{0,3}|[6-9]\\d{0,2})?\\d)-(6(?:[0-4]\\d{3}|5(?:[0-4]\\d{2}|5(?:[0-2]\\d|3[0-5])))|(?:[1-5]\\d{0,3}|[6-9]\\d{0,2})?\\d)$",
+        "maximumLength": 87516,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+      },
+      "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": null
+      },
+      "dependentOn": [
+        {
+          "dependentOn": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}",
+          "parentSettingId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}"
+        }
+      ],
+      "dependedOnBy": []
+    },
+    "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}": {
+      "@odata.context": "https://graph.microsoft.us/beta/$metadata#deviceManagement/configurationSettings/$entity",
+      "@odata.type": "#microsoft.graph.deviceManagementConfigurationSettingGroupCollectionDefinition",
+      "accessTypes": "add,delete,get,replace",
+      "keywords": [
+        " Firewall Rule Name",
+        "Firewall"
+      ],
+      "infoUrls": [],
+      "baseUri": "./Vendor/MSFT/Firewall",
+      "offsetUri": "/MdmStore/FirewallRules/{0}",
+      "rootDefinitionId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}",
+      "categoryId": "4a5e4714-00ac-4793-b0cc-5049041b0ed7",
+      "settingUsage": "configuration",
+      "uxBehavior": "default",
+      "visibility": "template",
+      "riskLevel": "low",
+      "id": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}",
+      "description": "Unique alpha numeric identifier for the rule.  The rule name must not include a forward slash (/).",
+      "helpText": "",
+      "name": "{FirewallRuleName}",
+      "displayName": " Firewall Rule Name",
+      "version": "639282295183631971",
+      "childIds": [
+        "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_firewallrulename",
+        "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_app_packagefamilyname",
+        "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_app_filepath",
+        "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_app_fqbn",
+        "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_app_servicename",
+        "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_protocol",
+        "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_localportranges",
+        "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_remoteportranges",
+        "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_icmptypesandcodes",
+        "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_localaddressranges",
+        "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_remoteaddressranges",
+        "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_remoteaddressdynamickeywords",
+        "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_description",
+        "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_enabled",
+        "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_profiles",
+        "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_action_type",
+        "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_direction",
+        "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_interfacetypes",
+        "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_edgetraversal",
+        "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_localuserauthorizedlist",
+        "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_policyappid",
+        "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_name"
+      ],
+      "maximumCount": 150,
+      "minimumCount": 0,
+      "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm,configManager,microsoftSense",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.16299",
+        "windowsSkus": [
+          "windowsEnterprise",
+          "windowsProfessional",
+          "windowsEducation",
+          "holographicForBusiness",
+          "windowsMultiSession",
+          "iotEnterprise",
+          "windowsCloudN",
+          "windows11SE",
+          "iotEnterpriseSEval",
+          "windowsCPC"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+      },
+      "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 100
+      },
+      "referredSettingInformationList": [],
+      "dependentOn": [],
+      "dependedOnBy": [
+        {
+          "dependedOnBy": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_firewallrulename",
+          "required": false
+        },
+        {
+          "dependedOnBy": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_app_packagefamilyname",
+          "required": false
+        },
+        {
+          "dependedOnBy": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_app_filepath",
+          "required": false
+        },
+        {
+          "dependedOnBy": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_app_fqbn",
+          "required": false
+        },
+        {
+          "dependedOnBy": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_app_servicename",
+          "required": false
+        },
+        {
+          "dependedOnBy": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_protocol",
+          "required": false
+        },
+        {
+          "dependedOnBy": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_localportranges",
+          "required": false
+        },
+        {
+          "dependedOnBy": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_remoteportranges",
+          "required": false
+        },
+        {
+          "dependedOnBy": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_icmptypesandcodes",
+          "required": false
+        },
+        {
+          "dependedOnBy": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_localaddressranges",
+          "required": false
+        },
+        {
+          "dependedOnBy": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_remoteaddressranges",
+          "required": false
+        },
+        {
+          "dependedOnBy": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_remoteaddressdynamickeywords",
+          "required": false
+        },
+        {
+          "dependedOnBy": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_description",
+          "required": false
+        },
+        {
+          "dependedOnBy": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_enabled",
+          "required": false
+        },
+        {
+          "dependedOnBy": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_profiles",
+          "required": false
+        },
+        {
+          "dependedOnBy": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_action_type",
+          "required": false
+        },
+        {
+          "dependedOnBy": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_direction",
+          "required": false
+        },
+        {
+          "dependedOnBy": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_interfacetypes",
+          "required": false
+        },
+        {
+          "dependedOnBy": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_edgetraversal",
+          "required": false
+        },
+        {
+          "dependedOnBy": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_localuserauthorizedlist",
+          "required": false
+        },
+        {
+          "dependedOnBy": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_policyappid",
+          "required": false
+        },
+        {
+          "dependedOnBy": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_name",
+          "required": true
+        }
+      ]
+    },
+    "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_enabled": {
+      "@odata.context": "https://graph.microsoft.us/beta/$metadata#deviceManagement/configurationSettings/$entity",
+      "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+      "accessTypes": "get,replace",
+      "keywords": [
+        "Enabled",
+        "Firewall"
+      ],
+      "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/Firewall-csp/"
+      ],
+      "baseUri": "./Vendor/MSFT/Firewall",
+      "offsetUri": "/MdmStore/FirewallRules/{0}/Enabled",
+      "rootDefinitionId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}",
+      "categoryId": "4a5e4714-00ac-4793-b0cc-5049041b0ed7",
+      "settingUsage": "configuration",
+      "uxBehavior": "toggle",
+      "visibility": "template",
+      "riskLevel": "low",
+      "id": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_enabled",
+      "description": "Indicates whether the rule is enabled or disabled. If not specified - a new rule is enabled by default.",
+      "helpText": "",
+      "name": "Enabled",
+      "displayName": "Enabled",
+      "version": "639282295183631971",
+      "defaultOptionId": null,
+      "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm,configManager,microsoftSense",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.16299",
+        "windowsSkus": [
+          "windowsEnterprise",
+          "windowsProfessional",
+          "windowsEducation",
+          "holographicForBusiness",
+          "windowsMultiSession",
+          "iotEnterprise",
+          "windowsCloudN",
+          "windows11SE",
+          "iotEnterpriseSEval",
+          "windowsCPC"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+      },
+      "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+      },
+      "referredSettingInformationList": [],
+      "options": [
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_enabled_0",
+          "description": "Disabled",
+          "helpText": null,
+          "name": "Disabled",
+          "displayName": "Disabled",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+            "settingValueTemplateReference": null,
+            "value": 0
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}"
+            }
+          ],
+          "dependedOnBy": []
+        },
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_enabled_1",
+          "description": "Enabled",
+          "helpText": null,
+          "name": "Enabled",
+          "displayName": "Enabled",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+            "settingValueTemplateReference": null,
+            "value": 1
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}"
+            }
+          ],
+          "dependedOnBy": []
+        }
+      ]
+    },
+    "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_direction": {
+      "@odata.context": "https://graph.microsoft.us/beta/$metadata#deviceManagement/configurationSettings/$entity",
+      "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+      "accessTypes": "get,replace",
+      "keywords": [
+        "Direction",
+        "Firewall"
+      ],
+      "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/Firewall-csp/"
+      ],
+      "baseUri": "./Vendor/MSFT/Firewall",
+      "offsetUri": "/MdmStore/FirewallRules/{0}/Direction",
+      "rootDefinitionId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}",
+      "categoryId": "4a5e4714-00ac-4793-b0cc-5049041b0ed7",
+      "settingUsage": "configuration",
+      "uxBehavior": "default",
+      "visibility": "template",
+      "riskLevel": "low",
+      "id": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_direction",
+      "description": "Comma separated list.  The rule is enabled based on the traffic direction as following.\n\nIN - the rule applies to inbound traffic.\nOUT - the rule applies to outbound traffic.\n\nIf not specified the detault is OUT.",
+      "helpText": "",
+      "name": "Direction",
+      "displayName": "Direction",
+      "version": "639282295183631971",
+      "defaultOptionId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_direction_out",
+      "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm,configManager,microsoftSense",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.16299",
+        "windowsSkus": [
+          "windowsEnterprise",
+          "windowsProfessional",
+          "windowsEducation",
+          "holographicForBusiness",
+          "windowsMultiSession",
+          "iotEnterprise",
+          "windowsCloudN",
+          "windows11SE",
+          "iotEnterpriseSEval",
+          "windowsCPC"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+      },
+      "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+      },
+      "referredSettingInformationList": [],
+      "options": [
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_direction_in",
+          "description": "The rule applies to inbound traffic.",
+          "helpText": null,
+          "name": "The rule applies to inbound traffic.",
+          "displayName": "The rule applies to inbound traffic.",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "settingValueTemplateReference": null,
+            "value": "IN"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}"
+            }
+          ],
+          "dependedOnBy": []
+        },
+        {
+          "itemId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_direction_out",
+          "description": "The rule applies to outbound traffic.",
+          "helpText": null,
+          "name": "The rule applies to outbound traffic.",
+          "displayName": "The rule applies to outbound traffic.",
+          "optionValue": {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+            "settingValueTemplateReference": null,
+            "value": "OUT"
+          },
+          "dependentOn": [
+            {
+              "dependentOn": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}",
+              "parentSettingId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}"
+            }
+          ],
+          "dependedOnBy": []
+        }
+      ]
+    },
+    "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_localaddressranges": {
+      "@odata.context": "https://graph.microsoft.us/beta/$metadata#deviceManagement/configurationSettings/$entity",
+      "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionDefinition",
+      "accessTypes": "add,delete,get,replace",
+      "keywords": [
+        "Local Address Ranges",
+        "Firewall"
+      ],
+      "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/Firewall-csp/"
+      ],
+      "baseUri": "./Vendor/MSFT/Firewall",
+      "offsetUri": "/MdmStore/FirewallRules/{0}/LocalAddressRanges",
+      "rootDefinitionId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}",
+      "categoryId": "4a5e4714-00ac-4793-b0cc-5049041b0ed7",
+      "settingUsage": "configuration",
+      "uxBehavior": "default",
+      "visibility": "template",
+      "riskLevel": "low",
+      "id": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_localaddressranges",
+      "description": "List of local addresses covered by the rule. Valid tokens include:​\r\n\r\n\"*\" indicates any local address. If present, this must be the only token included.\r\nA subnet can be specified using either the subnet mask or network prefix notation. If neither a subnet mask nor a network prefix is specified, the subnet mask defaults to 255.255.255.255.​​\r\nA valid IPv6 address.​​\r\nAn IPv4 address range in the format of \"start address - end address\" with no spaces included, where the start address is less than the end address.​​\r\nAn IPv6 address range in the format of \"start address - end address\" with no spaces included, where the start address is less than the end address.\r\n\r\nIf not specified, the default is \"Any address.\"",
+      "helpText": "",
+      "name": "LocalAddressRanges",
+      "displayName": "Local Address Ranges",
+      "version": "639282295183631971",
+      "maximumCount": 1000,
+      "minimumCount": 0,
+      "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm,configManager,microsoftSense",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.16299",
+        "windowsSkus": [
+          "windowsEnterprise",
+          "windowsProfessional",
+          "windowsEducation",
+          "holographicForBusiness",
+          "windowsMultiSession",
+          "iotEnterprise",
+          "windowsCloudN",
+          "windows11SE",
+          "iotEnterpriseSEval",
+          "windowsCPC"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+      },
+      "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+      },
+      "referredSettingInformationList": [],
+      "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "regEx",
+        "inputValidationSchema": "^(0[0-7]{10,11}|0(x|X)[0-9a-fA-F]{8}|(\\b4\\d{8}[0-5]\\b|\\b[1-3]?\\d{8}\\d?\\b)|((2(([0-4]\\d)|(5[0-5]))|1\\d{2}|\\d\\d?)|(0(x|X)[0-9a-fA-F]{2})|(0[0-7]{3}))(\\.((2(([0-4]\\d)|(5[0-5]))|1\\d{2}|\\d\\d?)|(0(x|X)[0-9a-fA-F]{2})|(0[0-7]{3}))){3})(/0*(\\d{1}|(?:[0-2]\\d|3[0-2])))?$|^(0[0-7]{10,11}|0(x|X)[0-9a-fA-F]{8}|(\\b4\\d{8}[0-5]\\b|\\b[1-3]?\\d{8}\\d?\\b)|((2(([0-4]\\d)|(5[0-5]))|1\\d{2}|\\d\\d?)|(0(x|X)[0-9a-fA-F]{2})|(0[0-7]{3}))(\\.((2(([0-4]\\d)|(5[0-5]))|1\\d{2}|\\d\\d?)|(0(x|X)[0-9a-fA-F]{2})|(0[0-7]{3}))){3})(\\/(((25[0-5]?)|(2[0-4]\\d?)|(1\\d\\d?)|\\d{1,2})\\.){3}((25[0-5]?)|(2[0-4]\\d?)|(1\\d?)|\\d{1,2}))?$|^(((25[0-5]?)|(2[0-4][0-9]?)|(1[0-9]{2})|[0-9]{1,2})(\\.((25[0-5]?)|(2[0-4][0-9]?)|(1[0-9]{2})|[0-9]{1,2})){3})-(((25[0-5]?)|(2[0-4][0-9]?)|(1[0-9]{2})|[0-9]{1,2})(\\.((25[0-5]?)|(2[0-4][0-9]?)|(1[0-9]{2})|[0-9]{1,2})){3})$|^((([0-9A-Fa-f]{1,4}:){7}([0-9A-Fa-f]{1,4}|:))|(([0-9A-Fa-f]{1,4}:){6}(:[0-9A-Fa-f]{1,4}|((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3})|:))|(([0-9A-Fa-f]{1,4}:){5}(((:[0-9A-Fa-f]{1,4}){1,2})|:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3})|:))|(([0-9A-Fa-f]{1,4}:){4}(((:[0-9A-Fa-f]{1,4}){1,3})|((:[0-9A-Fa-f]{1,4})?:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){3}(((:[0-9A-Fa-f]{1,4}){1,4})|((:[0-9A-Fa-f]{1,4}){0,2}:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){2}(((:[0-9A-Fa-f]{1,4}){1,5})|((:[0-9A-Fa-f]{1,4}){0,3}:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){1}(((:[0-9A-Fa-f]{1,4}){1,6})|((:[0-9A-Fa-f]{1,4}){0,4}:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:))|(:(((:[0-9A-Fa-f]{1,4}){1,7})|((:[0-9A-Fa-f]{1,4}){0,5}:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:)))(/0*(\\d{1,2}|1(?:[0-1]\\d|2[0-8])))?$|^\\[((([0-9A-Fa-f]{1,4}:){7}([0-9A-Fa-f]{1,4}|:))|(([0-9A-Fa-f]{1,4}:){6}(:[0-9A-Fa-f]{1,4}|((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3})|:))|(([0-9A-Fa-f]{1,4}:){5}(((:[0-9A-Fa-f]{1,4}){1,2})|:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3})|:))|(([0-9A-Fa-f]{1,4}:){4}(((:[0-9A-Fa-f]{1,4}){1,3})|((:[0-9A-Fa-f]{1,4})?:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){3}(((:[0-9A-Fa-f]{1,4}){1,4})|((:[0-9A-Fa-f]{1,4}){0,2}:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){2}(((:[0-9A-Fa-f]{1,4}){1,5})|((:[0-9A-Fa-f]{1,4}){0,3}:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){1}(((:[0-9A-Fa-f]{1,4}){1,6})|((:[0-9A-Fa-f]{1,4}){0,4}:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:))|(:(((:[0-9A-Fa-f]{1,4}){1,7})|((:[0-9A-Fa-f]{1,4}){0,5}:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:)))\\](/0*(\\d{1,2}|1(?:[0-1]\\d|2[0-8])))?$|^(((([0-9A-Fa-f]{1,4}:){7}([0-9A-Fa-f]{1,4}|:))|(([0-9A-Fa-f]{1,4}:){6}(:[0-9A-Fa-f]{1,4}|((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3})|:))|(([0-9A-Fa-f]{1,4}:){5}(((:[0-9A-Fa-f]{1,4}){1,2})|:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3})|:))|(([0-9A-Fa-f]{1,4}:){4}(((:[0-9A-Fa-f]{1,4}){1,3})|((:[0-9A-Fa-f]{1,4})?:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){3}(((:[0-9A-Fa-f]{1,4}){1,4})|((:[0-9A-Fa-f]{1,4}){0,2}:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){2}(((:[0-9A-Fa-f]{1,4}){1,5})|((:[0-9A-Fa-f]{1,4}){0,3}:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){1}(((:[0-9A-Fa-f]{1,4}){1,6})|((:[0-9A-Fa-f]{1,4}){0,4}:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:))|(:(((:[0-9A-Fa-f]{1,4}){1,7})|((:[0-9A-Fa-f]{1,4}){0,5}:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:)))|(\\[((([0-9A-Fa-f]{1,4}:){7}([0-9A-Fa-f]{1,4}|:))|(([0-9A-Fa-f]{1,4}:){6}(:[0-9A-Fa-f]{1,4}|((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3})|:))|(([0-9A-Fa-f]{1,4}:){5}(((:[0-9A-Fa-f]{1,4}){1,2})|:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3})|:))|(([0-9A-Fa-f]{1,4}:){4}(((:[0-9A-Fa-f]{1,4}){1,3})|((:[0-9A-Fa-f]{1,4})?:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){3}(((:[0-9A-Fa-f]{1,4}){1,4})|((:[0-9A-Fa-f]{1,4}){0,2}:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){2}(((:[0-9A-Fa-f]{1,4}){1,5})|((:[0-9A-Fa-f]{1,4}){0,3}:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){1}(((:[0-9A-Fa-f]{1,4}){1,6})|((:[0-9A-Fa-f]{1,4}){0,4}:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:))|(:(((:[0-9A-Fa-f]{1,4}){1,7})|((:[0-9A-Fa-f]{1,4}){0,5}:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:)))\\]))-(((([0-9A-Fa-f]{1,4}:){7}([0-9A-Fa-f]{1,4}|:))|(([0-9A-Fa-f]{1,4}:){6}(:[0-9A-Fa-f]{1,4}|((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3})|:))|(([0-9A-Fa-f]{1,4}:){5}(((:[0-9A-Fa-f]{1,4}){1,2})|:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3})|:))|(([0-9A-Fa-f]{1,4}:){4}(((:[0-9A-Fa-f]{1,4}){1,3})|((:[0-9A-Fa-f]{1,4})?:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){3}(((:[0-9A-Fa-f]{1,4}){1,4})|((:[0-9A-Fa-f]{1,4}){0,2}:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){2}(((:[0-9A-Fa-f]{1,4}){1,5})|((:[0-9A-Fa-f]{1,4}){0,3}:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){1}(((:[0-9A-Fa-f]{1,4}){1,6})|((:[0-9A-Fa-f]{1,4}){0,4}:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:))|(:(((:[0-9A-Fa-f]{1,4}){1,7})|((:[0-9A-Fa-f]{1,4}){0,5}:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:)))|(\\[((([0-9A-Fa-f]{1,4}:){7}([0-9A-Fa-f]{1,4}|:))|(([0-9A-Fa-f]{1,4}:){6}(:[0-9A-Fa-f]{1,4}|((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3})|:))|(([0-9A-Fa-f]{1,4}:){5}(((:[0-9A-Fa-f]{1,4}){1,2})|:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3})|:))|(([0-9A-Fa-f]{1,4}:){4}(((:[0-9A-Fa-f]{1,4}){1,3})|((:[0-9A-Fa-f]{1,4})?:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){3}(((:[0-9A-Fa-f]{1,4}){1,4})|((:[0-9A-Fa-f]{1,4}){0,2}:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){2}(((:[0-9A-Fa-f]{1,4}){1,5})|((:[0-9A-Fa-f]{1,4}){0,3}:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){1}(((:[0-9A-Fa-f]{1,4}){1,6})|((:[0-9A-Fa-f]{1,4}){0,4}:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:))|(:(((:[0-9A-Fa-f]{1,4}){1,7})|((:[0-9A-Fa-f]{1,4}){0,5}:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:)))\\]))$|^\\*$",
+        "maximumLength": 87516,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+      },
+      "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": null
+      },
+      "dependentOn": [
+        {
+          "dependentOn": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}",
+          "parentSettingId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}"
+        }
+      ],
+      "dependedOnBy": []
+    },
+    "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_description": {
+      "@odata.context": "https://graph.microsoft.us/beta/$metadata#deviceManagement/configurationSettings/$entity",
+      "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+      "accessTypes": "add,delete,get,replace",
+      "keywords": [
+        "Description",
+        "Firewall"
+      ],
+      "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/Firewall-csp/"
+      ],
+      "baseUri": "./Vendor/MSFT/Firewall",
+      "offsetUri": "/MdmStore/FirewallRules/{0}/Description",
+      "rootDefinitionId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}",
+      "categoryId": "4a5e4714-00ac-4793-b0cc-5049041b0ed7",
+      "settingUsage": "configuration",
+      "uxBehavior": "default",
+      "visibility": "template",
+      "riskLevel": "low",
+      "id": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_description",
+      "description": "Specifies the description of the rule.",
+      "helpText": "",
+      "name": "Description",
+      "displayName": "Description",
+      "version": "639282295183631971",
+      "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm,configManager,microsoftSense",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.16299",
+        "windowsSkus": [
+          "windowsEnterprise",
+          "windowsProfessional",
+          "windowsEducation",
+          "holographicForBusiness",
+          "windowsMultiSession",
+          "iotEnterprise",
+          "windowsCloudN",
+          "windows11SE",
+          "iotEnterpriseSEval",
+          "windowsCPC"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+      },
+      "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+      },
+      "referredSettingInformationList": [],
+      "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": null,
+        "maximumLength": 87516,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+      },
+      "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": null
+      },
+      "dependentOn": [
+        {
+          "dependentOn": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}",
+          "parentSettingId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}"
+        }
+      ],
+      "dependedOnBy": []
+    }
+  }
+}

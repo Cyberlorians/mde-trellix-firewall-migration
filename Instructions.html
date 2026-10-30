@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trellix to Defender | Instructions</title>
+<script>
+  (() => {
+    const param = new URLSearchParams(window.location.search).get("scoutTheme");
+    const theme =
+      param || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    document.documentElement.setAttribute("data-theme", theme);
+  })();
+</script>
+<style>
+:root {
+  color-scheme: light;
+  --cp-bg: #f7f4ef;
+  --cp-bg-elevated: #fcfbf8;
+  --cp-surface: #ffffff;
+  --cp-surface-soft: #f5f5f5;
+  --cp-border: #dedede;
+  --cp-border-strong: #919191;
+  --cp-text: #242424;
+  --cp-text-muted: #5c5c5c;
+  --cp-text-soft: #6f6f6f;
+  --cp-accent: #b11f4b;
+  --cp-accent-hover: #9a1a41;
+  --cp-accent-soft: rgba(177, 31, 75, 0.08);
+  --cp-accent-fg: #ffffff;
+  --cp-success: #16a34a;
+  --cp-danger: #dc2626;
+  --cp-warning: #f59e0b;
+  --cp-link: #0078d4;
+  --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.12);
+  --cp-overlay: rgba(255, 255, 255, 0.8);
+  --cp-panel: rgba(255, 255, 255, 0.86);
+  --cp-panel-strong: rgba(255, 255, 255, 0.96);
+  --cp-sheen: rgba(255, 255, 255, 0.55);
+  --cp-highlight: rgba(177, 31, 75, 0.12);
+}
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --cp-bg: #3d3b3a;
+  --cp-bg-elevated: #343231;
+  --cp-surface: #292929;
+  --cp-surface-soft: #2e2e2e;
+  --cp-border: #474747;
+  --cp-border-strong: #5f5f5f;
+  --cp-text: #dedede;
+  --cp-text-muted: #919191;
+  --cp-text-soft: #b0b0b0;
+  --cp-accent: #fd8ea1;
+  --cp-accent-hover: #fb7b91;
+  --cp-accent-soft: rgba(253, 142, 161, 0.14);
+  --cp-accent-fg: #1a1a1a;
+  --cp-success: #4ade80;
+  --cp-danger: #f87171;
+  --cp-warning: #fbbf24;
+  --cp-link: #4da6ff;
+  --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.32);
+  --cp-overlay: rgba(41, 41, 41, 0.88);
+  --cp-panel: rgba(41, 41, 41, 0.72);
+  --cp-panel-strong: rgba(41, 41, 41, 0.96);
+  --cp-sheen: rgba(255, 255, 255, 0.04);
+  --cp-highlight: rgba(253, 142, 161, 0.12);
+}
+*{box-sizing:border-box}
+body{margin:0;padding:32px;background:var(--cp-bg);color:var(--cp-text);font-family:"Segoe UI",Aptos,Calibri,-apple-system,BlinkMacSystemFont,sans-serif;line-height:1.5}
+.wrap{max-width:860px;margin:0 auto}
+h1{font-size:28px;margin-bottom:4px}
+.sub{color:var(--cp-text-muted);margin-top:0;margin-bottom:28px}
+.safety{background:var(--cp-accent-soft);border:1px solid var(--cp-accent);border-radius:16px;padding:20px 24px;margin-bottom:28px}
+.safety h2{margin-top:0;font-size:16px;color:var(--cp-accent)}
+.safety ul{margin:8px 0 0;padding-left:20px}
+.safety li{margin-bottom:6px}
+.step{background:var(--cp-surface);border:1px solid var(--cp-border);border-radius:16px;padding:22px 24px;margin-bottom:18px;box-shadow:0 0 2px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.14)}
+.step h2{margin:0 0 10px;font-size:17px;display:flex;align-items:center;gap:10px}
+.step-num{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:var(--cp-accent);color:var(--cp-accent-fg);font-size:14px;font-weight:700;flex-shrink:0}
+.step p{margin:8px 0}
+.cmd{display:flex;gap:8px;align-items:stretch;margin:12px 0}
+.cmd code{flex:1;background:var(--cp-bg-elevated);border:1px solid var(--cp-border);border-radius:.625rem;padding:12px 14px;font-family:Consolas,"Courier New",Courier,monospace;font-size:13px;overflow-x:auto;white-space:pre}
+.copy-btn{border:1px solid var(--cp-border);background:var(--cp-surface);color:var(--cp-text);border-radius:.625rem;padding:0 16px;cursor:pointer;font:inherit;font-size:13px;white-space:nowrap}
+.copy-btn:hover{background:var(--cp-surface-soft)}
+.copy-btn.copied{background:var(--cp-success);color:#fff;border-color:var(--cp-success)}
+.tenant-row{display:flex;gap:10px;align-items:center;margin:10px 0;flex-wrap:wrap}
+.tenant-row label{font-size:13px;color:var(--cp-text-muted)}
+.tenant-row input{flex:1;min-width:260px;padding:10px 12px;border:1px solid var(--cp-border);border-radius:.625rem;background:var(--cp-surface);color:var(--cp-text);font:inherit;font-family:Consolas,"Courier New",Courier,monospace;font-size:13px}
+.pill{display:inline-block;background:var(--cp-surface-soft);border:1px solid var(--cp-border);border-radius:999px;padding:2px 10px;font-size:12px;color:var(--cp-text-muted)}
+.note{color:var(--cp-text-muted);font-size:13px;margin-top:6px}
+.output-list{margin:10px 0 0;padding-left:20px}
+.output-list li{margin-bottom:8px}
+a{color:var(--cp-link)}
+.faq summary{cursor:pointer;font-weight:600;margin-bottom:6px}
+.faq{margin-bottom:12px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Trellix Firewall &rarr; Microsoft Defender (GCC High)</h1>
+<p class="sub">How to run the migration script and what the output means.</p>
+
+<div class="safety">
+  <h2>Before you start: what this does and does not do</h2>
+  <ul>
+    <li>Creates one <strong>new</strong> policy in Microsoft Defender (Endpoint security &rarr; Firewall). It never edits or deletes anything that already exists.</li>
+    <li>Every rule it creates is <strong>Disabled</strong>. Nothing starts blocking or allowing traffic.</li>
+    <li>The new policy has <strong>zero device assignments</strong>. No endpoint is affected by running this.</li>
+    <li>Running it again does not create a duplicate &mdash; it re-checks the same policy and reports the same result.</li>
+    <li>Rules that can't be mapped automatically are listed as <strong>Open</strong>, with the reason. Nothing is guessed or faked to make numbers look better.</li>
+  </ul>
+</div>
+
+<div class="step">
+  <h2><span class="step-num">1</span>Download the files</h2>
+  <p>Get this toolkit from GitHub: <a href="https://github.com/Cyberlorians/mde-trellix-firewall-migration" target="_blank" rel="noopener noreferrer">github.com/Cyberlorians/mde-trellix-firewall-migration</a></p>
+  <p>Click the green <strong>Code</strong> button &rarr; <strong>Download ZIP</strong>, then extract it anywhere on your computer (for example your Desktop). You can also <code>git clone</code> it if you prefer. Either way, you'll end up with a folder containing this page, <code>Deploy-TrellixFirewallRules.ps1</code> and a <code>toolkit</code> subfolder &mdash; keep them together.</p>
+</div>
+
+<div class="step">
+  <h2><span class="step-num">2</span>What you need</h2>
+  <ul class="output-list">
+    <li>Windows computer with <strong>PowerShell 7.4+</strong>. Check with <code>pwsh -v</code>; if missing, get it from <a href="https://aka.ms/powershell" target="_blank" rel="noopener noreferrer">aka.ms/powershell</a>.</li>
+    <li>Your <strong>GCC High tenant ID</strong> (Entra/Azure AD tenant GUID).</li>
+    <li>An account with permission to create Intune/Defender configuration policies in that tenant.</li>
+    <li>This whole downloaded folder kept together &mdash; don't move the files apart from each other.</li>
+    <li>Your <strong>Trellix ENS Firewall XML export</strong> &mdash; the exact same file this mapping was reviewed against.</li>
+  </ul>
+</div>
+
+<div class="step">
+  <h2><span class="step-num">3</span>Add your Trellix XML export</h2>
+  <p>Copy your Trellix ENS Firewall export XML into <strong>the same folder you just downloaded/extracted</strong> (easiest), or anywhere else on your computer. The script checks it is byte-for-byte the exact file this mapping was built and reviewed against, so don't edit or re-export it.</p>
+  <div class="tenant-row">
+    <label for="xml-input">Full path to your XML file:</label>
+    <input id="xml-input" type="text" placeholder="C:\Users\YourName\Desktop\mde-trellix-firewall-migration\YourExport.xml" autocomplete="off" spellcheck="false">
+  </div>
+  <p class="note">If you copy the file directly into the downloaded folder and leave the box above blank, the script will look for it automatically. Otherwise, fill in the full path above &mdash; it's added to the command for you in the next step.</p>
+</div>
+
+<div class="step">
+  <h2><span class="step-num">4</span>Run the script</h2>
+  <p>Open the downloaded folder, right-click inside it and choose <strong>"Open in Terminal"</strong> (or open PowerShell and <code>cd</code> into the folder). Fill in your tenant ID and XML path above, then copy the command it builds for you:</p>
+  <div class="tenant-row">
+    <label for="tenant-input">Your GCC High tenant ID:</label>
+    <input id="tenant-input" type="text" placeholder="11111111-2222-3333-4444-555555555555" autocomplete="off" spellcheck="false">
+  </div>
+  <div class="cmd">
+    <code id="run-cmd">pwsh -NoProfile -File .\Deploy-TrellixFirewallRules.ps1 -TenantId "11111111-2222-3333-4444-555555555555"</code>
+    <button class="copy-btn" id="copy-run" type="button">Copy</button>
+  </div>
+  <p class="note">Want to see the rule counts first <strong>without</strong> signing in or changing anything? Add <span class="pill">-PrepareOnly</span>:</p>
+  <div class="cmd">
+    <code id="dry-cmd">pwsh -NoProfile -File .\Deploy-TrellixFirewallRules.ps1 -TenantId "11111111-2222-3333-4444-555555555555" -PrepareOnly</code>
+    <button class="copy-btn" id="copy-dry" type="button">Copy</button>
+  </div>
+</div>
+
+<div class="step">
+  <h2><span class="step-num">5</span>Sign in when prompted</h2>
+  <p>The script will print a web address and a short code, for example:</p>
+  <div class="cmd"><code>To sign in, use a web browser to open the page https://login.microsoftonline.us/device and enter the code ABCD1234 to authenticate.</code></div>
+  <p>Open that address in any browser, enter the code, and sign in with an account that can create Intune/Defender policies in your GCC High tenant.</p>
+</div>
+
+<div class="step">
+  <h2><span class="step-num">6</span>Wait for it to publish and verify</h2>
+  <p>The script publishes the policy, then <strong>reads it back from Microsoft</strong> to confirm it matches exactly and is still unassigned, before it tells you anything succeeded.</p>
+</div>
+
+<div class="step">
+  <h2><span class="step-num">7</span>Review the results</h2>
+  <p>When it finishes, it saves a file named <code>Results-&lt;your tenant id&gt;.html</code> in the downloaded folder. Open it in any browser. It shows:</p>
+  <ul class="output-list">
+    <li><strong>Mapped and deployed</strong> &mdash; every Trellix rule name next to its exact new Defender rule name, and a direct link to the policy.</li>
+    <li><strong>Open</strong> &mdash; Trellix rules or rule groups that could not be mapped automatically, and the specific reason why.</li>
+  </ul>
+</div>
+
+<div class="step">
+  <h2><span class="step-num">8</span>After this runs</h2>
+  <p>The new policy is <strong>Disabled</strong> and <strong>unassigned</strong> on purpose. Before turning any rule on or assigning it to devices:</p>
+  <ul class="output-list">
+    <li>Review each rule inside the policy in the Defender portal.</li>
+    <li>Pick a small pilot group of devices to test with first.</li>
+    <li>Separately review everything listed as <strong>Open</strong> in the results &mdash; it represents real Trellix configuration that did not have a safe automatic Defender equivalent.</li>
+  </ul>
+</div>
+
+<div class="step">
+  <h2>Questions / troubleshooting</h2>
+  <div class="faq"><details><summary>The script stopped with an error</summary><p>It is telling you exactly what it refused to do and why (for example: wrong XML file, or a previous run's files changed on disk). It does not silently continue after an error &mdash; fix what it reports and rerun.</p></details></div>
+  <div class="faq"><details><summary>It says the XML doesn't match / "does not match the file this mapping was reviewed against"</summary><p>This migration was built and reviewed against one specific export. If your file has since been re-exported from Trellix (even with no visible changes), its checksum will differ and the script will stop rather than silently map against unreviewed data. Use the original file, or have the mapping reviewed again against the new export.</p></details></div>
+  <div class="faq"><details><summary>Can I run this more than once?</summary><p>Yes. It reuses the same policy rather than creating a duplicate, and re-verifies it is still correct and unassigned.</p></details></div>
+  <div class="faq"><details><summary>Does this turn anything on?</summary><p>No. Every rule it creates is Disabled, and the policy is never assigned to any device by this script.</p></details></div>
+</div>
+
+</div>
+<script>
+(() => {
+  const tenantInput = document.getElementById('tenant-input');
+  const xmlInput = document.getElementById('xml-input');
+  const runCmd = document.getElementById('run-cmd');
+  const dryCmd = document.getElementById('dry-cmd');
+  const placeholder = '11111111-2222-3333-4444-555555555555';
+  function update() {
+    const tenant = tenantInput.value.trim() || placeholder;
+    const xml = xmlInput.value.trim();
+    const xmlArg = xml ? ' -XmlPath "' + xml + '"' : '';
+    runCmd.textContent = 'pwsh -NoProfile -File .\\Deploy-TrellixFirewallRules.ps1 -TenantId "' + tenant + '"' + xmlArg;
+    dryCmd.textContent = 'pwsh -NoProfile -File .\\Deploy-TrellixFirewallRules.ps1 -TenantId "' + tenant + '"' + xmlArg + ' -PrepareOnly';
+  }
+  tenantInput.addEventListener('input', update);
+  xmlInput.addEventListener('input', update);
+  function wireCopy(buttonId, codeEl) {
+    document.getElementById(buttonId).addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(codeEl.textContent);
+        const button = document.getElementById(buttonId);
+        button.textContent = 'Copied!';
+        button.classList.add('copied');
+        setTimeout(() => { button.textContent = 'Copy'; button.classList.remove('copied'); }, 1500);
+      } catch {}
+    });
+  }
+  wireCopy('copy-run', runCmd);
+  wireCopy('copy-dry', dryCmd);
+})();
+</script>
+</body>
+</html>
