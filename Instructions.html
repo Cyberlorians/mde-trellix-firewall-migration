@@ -83,6 +83,7 @@ h1{font-size:28px;margin-bottom:4px}
 .copy-btn{border:1px solid var(--cp-border);background:var(--cp-surface);color:var(--cp-text);border-radius:.625rem;padding:0 16px;cursor:pointer;font:inherit;font-size:13px;white-space:nowrap}
 .copy-btn:hover{background:var(--cp-surface-soft)}
 .copy-btn.copied{background:var(--cp-success);color:#fff;border-color:var(--cp-success)}
+.copy-btn.copy-failed{background:var(--cp-warning);color:#1a1a1a;border-color:var(--cp-warning)}
 .tenant-row{display:flex;gap:10px;align-items:center;margin:10px 0;flex-wrap:wrap}
 .tenant-row label{font-size:13px;color:var(--cp-text-muted)}
 .tenant-row input{flex:1;min-width:260px;padding:10px 12px;border:1px solid var(--cp-border);border-radius:.625rem;background:var(--cp-surface);color:var(--cp-text);font:inherit;font-family:Consolas,"Courier New",Courier,monospace;font-size:13px}
@@ -212,15 +213,49 @@ a{color:var(--cp-link)}
   }
   tenantInput.addEventListener('input', update);
   xmlInput.addEventListener('input', update);
+  function legacyCopy(text) {
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    textarea.style.position = 'fixed';
+    textarea.style.opacity = '0';
+    textarea.style.left = '-9999px';
+    document.body.appendChild(textarea);
+    textarea.focus();
+    textarea.select();
+    textarea.setSelectionRange(0, text.length);
+    let ok = false;
+    try { ok = document.execCommand('copy'); } catch { ok = false; }
+    document.body.removeChild(textarea);
+    return ok;
+  }
   function wireCopy(buttonId, codeEl) {
     document.getElementById(buttonId).addEventListener('click', async () => {
-      try {
-        await navigator.clipboard.writeText(codeEl.textContent);
-        const button = document.getElementById(buttonId);
+      const button = document.getElementById(buttonId);
+      const text = codeEl.textContent;
+      let copied = false;
+      // navigator.clipboard requires a secure context (https/localhost). Opening this file
+      // directly (file://) is NOT a secure context, so it silently fails there — fall back
+      // to the older execCommand approach, which works in both cases.
+      if (window.isSecureContext && navigator.clipboard && navigator.clipboard.writeText) {
+        try { await navigator.clipboard.writeText(text); copied = true; } catch { copied = false; }
+      }
+      if (!copied) { copied = legacyCopy(text); }
+      if (copied) {
         button.textContent = 'Copied!';
+        button.classList.remove('copy-failed');
         button.classList.add('copied');
         setTimeout(() => { button.textContent = 'Copy'; button.classList.remove('copied'); }, 1500);
-      } catch {}
+      } else {
+        // Last resort: the text is selected in the code block so the user can press Ctrl+C.
+        const range = document.createRange();
+        range.selectNodeContents(codeEl);
+        const selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+        button.textContent = 'Press Ctrl+C';
+        button.classList.add('copy-failed');
+        setTimeout(() => { button.textContent = 'Copy'; button.classList.remove('copy-failed'); }, 2500);
+      }
     });
   }
   wireCopy('copy-run', runCmd);
