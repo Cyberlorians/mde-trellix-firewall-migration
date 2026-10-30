@@ -16,6 +16,25 @@ firewall rules in **GCC High**, and stages them safely:
 - A GCC High tenant ID and an account that can create Intune/Defender configuration policies
 - Your own Trellix ENS Firewall XML export (not included in this repository)
 
+## Permissions required
+
+Sign-in uses Microsoft's standard device-code flow against the **Microsoft Graph
+PowerShell** public client (`14d82eec-204b-4c2f-b7e8-296a70dab67e`), not a custom app
+registration — nothing to register or consent to ahead of time beyond normal Graph usage.
+
+- **Delegated Graph permission:** `DeviceManagementConfiguration.ReadWrite.All`
+  (scope requested: `https://graph.microsoft.us/DeviceManagementConfiguration.ReadWrite.All`)
+- **Minimum Entra/Intune role:** the signed-in account needs an Intune RBAC role that can
+  create device configuration policies — e.g. **Policy and Profile Manager**, or an
+  Intune/Endpoint Manager **Administrator** role. Read-only roles are not enough; the
+  script needs to create a new policy (`POST`), even though it never assigns or activates one.
+- **Tenant:** GCC High only (`graph.microsoft.us` / `login.microsoftonline.us`). This does
+  not work against commercial/GCC Graph endpoints.
+
+The token is used only in the local PowerShell process for this run and is never written
+to disk. The script cannot assign devices, delete policies, or modify anything that
+already exists — the permission only lets it create and read back its own new policy.
+
 ## Step 1 — Download the files
 
 Click the green **Code** button above → **Download ZIP**, then extract it anywhere on your
@@ -59,8 +78,8 @@ The script prints a web address and a short code, for example:
 To sign in, use a web browser to open the page https://login.microsoftonline.us/device and enter the code ABCD1234 to authenticate.
 ```
 
-Open that address in any browser, enter the code, and sign in with an account that can
-create Intune/Defender policies in your GCC High tenant.
+Open that address in any browser, enter the code, and sign in with an account that has
+the Graph permission/role described in **Permissions required** above.
 
 ## Step 5 — Wait for it to publish and verify
 
